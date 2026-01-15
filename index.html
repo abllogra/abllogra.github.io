@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Abel · iOS Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Abel · iOS Developer · Swift · SwiftUI" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --fg: #e6e6e6;
+      --muted: #8a8f98;
+      --accent: #6cff9d;
+      --border: #1f232b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+      padding: 32px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      padding: 32px;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0.02) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+    }
+
+    .ascii {
+      color: var(--accent);
+      font-size: 12px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      white-space: pre;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin: 0 0 24px 0;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0 0 24px 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--fg);
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    a::before {
+      content: "> ";
+      color: var(--accent);
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .footer {
+      margin-top: 32px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Small pixel cursor effect */
+    body::after {
+      content: "█";
+      color: var(--accent);
+      animation: blink 1.2s steps(1) infinite;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="ascii">
+┌──────────────────────────────┐
+│  Abel                        │
+│  iOS Developer               │
+│  Swift · SwiftUI             │
+└──────────────────────────────┘
+      </div>
+
+      <h1>Abel Llopis</h1>
+      <h2>iOS Developer</h2>
+
+      <!-- <p>
+        Desarrollo aplicaciones iOS centradas en rendimiento,
+        simplicidad y experiencia de usuario.
+        Me gusta el código claro, las interfaces nativas
+        y los productos bien pensados.
+      </p> -->
+
+      <div class="links">
+        <a href="mailto:abllogra@gmail.com">abllogra@gmail.com</a>
+        <a href="https://x.com/abel_llopis" title="LinkedIn">LinkedIn</a>
+        <a href="https://x.com/abel_llopis" title="X / Twitter">X</a>
+      </div>
+
+      <div class="footer">
+        © <span id="year"></span> · Built for GitHub Pages
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
